@@ -10,6 +10,7 @@ public class Triangulo {
 
 	public Triangulo(int lado1, int lado2, int lado3, int angulo1, int angulo2, int angulo3) {
 		super();
+	/* ASI NO!!! USA LOS METODOS SET PARA ASIGNAR VALOR: this.setLado1 (lado1); */
 		this.lado1 = lado1;
 		this.lado2 = lado2;
 		this.lado3 = lado3;
