@@ -1,5 +1,7 @@
 package ISOFT2_2022_ET.ISOFT2_2022_ET;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import ISOFT2_2022_ET.ISOFT2_2022_ET.model.Triangulo;
@@ -11,38 +13,34 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int lado1, lado2, lado3, angulo1, angulo2, angulo3;
+		List<Integer> list = new ArrayList<Integer>();
 
-		try {
-		/* Y UNA FUNCIONCITA PARA LEER ENTEROS DE TECLADO??*/ 
-			System.out.println("Lado 1");
-			lado1 = TECLADO.nextInt();
-
-			System.out.println("Lado 2");
-			lado2 = TECLADO.nextInt();
-
-			System.out.println("Lado 3");
-			lado3 = TECLADO.nextInt();
-
-			System.out.println("Angulo 1");
-			angulo1 = TECLADO.nextInt();
-
-			System.out.println("Angulo 2");
-			angulo2 = TECLADO.nextInt();
-
-			System.out.println("Angulo 3");
-			angulo3 = TECLADO.nextInt();
-/* TODO ESTO METELO EN EL CONSTRUCTOR */
-			if (lado1 < 0 || lado2 < 0 || lado3 < 0 || angulo1 < 0 || angulo2 < 0 || angulo2 < 0) {
-				throw new Exception();
-			}
-
-			Triangulo t1 = new Triangulo(lado1, lado2, lado3, angulo1, angulo2, angulo3);
-			TrianguloController.tipoDeTriangulo(t1);
-
-		} catch (Exception e) {
-			System.out.println("No se pueden introducir caracteres o numeros negativos");
+		String[] messages = { "Lado 1", "Lado 2", "Lado 3", "Angulo 1", "Angulo 2", "Angulo 3" };
+		for (int i = 0; i < messages.length; i++) {
+			System.out.println(messages[i]);
+			list.add(leerEnteros());
 		}
 
+		Triangulo t = new Triangulo();
+		t.setLado1(list.get(0));
+		t.setLado2(list.get(1));
+		t.setLado3(list.get(2));
+		t.setAngulo1(list.get(3));
+		t.setAngulo2(list.get(4));
+		t.setAngulo3(list.get(5));
+		
+		TrianguloController.tipoDeTriangulo(t);
+
+	}
+
+	private static int leerEnteros() {
+		Integer value = null;
+		try {
+			value = TECLADO.nextInt();
+		} catch (Exception e) {
+			System.out.println("No se pueden introducir caracteres");
+		}
+
+		return value;
 	}
 }

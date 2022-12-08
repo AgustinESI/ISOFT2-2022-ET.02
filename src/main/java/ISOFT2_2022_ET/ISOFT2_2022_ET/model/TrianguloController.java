@@ -4,12 +4,14 @@ public class TrianguloController {
 
 	public static void tipoDeTriangulo(Triangulo t) {
 
-		if ((t.getAngulo1() + t.getAngulo2() + t.getAngulo3()) > 180) {
-			throw new RuntimeException("Angulos no validos");
+		// Ifs para comprobar que los valroes no sean negativos y 0
+		if (t.getLado1() <= 0 || t.getLado2() <= 0 || t.getLado3() <= 0 || t.getAngulo1() <= 0 || t.getAngulo2() <= 0 || t.getAngulo3() <= 0) {
+			throw new RuntimeException("Numeros negativos no validos");
 		}
 
-		if (Math.pow(t.getAngulo3(), 2) != (Math.pow(t.getAngulo1(), 2) + Math.pow(t.getAngulo2(), 2))) {
-			throw new RuntimeException("Lados no validos");
+		// Ifs para comprobar que cumpla la condicion de triangulo
+		if ((t.getAngulo1() + t.getAngulo2() + t.getAngulo3()) > 180) {
+			throw new RuntimeException("Angulos no validos");
 		}
 
 		// Ifs para comprobar que tipo es segun los lados
