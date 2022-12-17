@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import ISOFT2_2022_ET.ISOFT2_2022_ET.model.Triangulo;
-import ISOFT2_2022_ET.ISOFT2_2022_ET.model.TrianguloController;
 
 /**
  * Clase de ejecución del sistema
@@ -22,7 +21,6 @@ public class Main {
 	/**
 	 * Creación del controlador que calcula que tipo de triangulo es
 	 */
-	public static final TrianguloController tipoController = new TrianguloController();
 
 	/**
 	 * Método principal que lanza la aplicación.
@@ -38,7 +36,7 @@ public class Main {
 		t.setAngulo1(list.get(3));
 		t.setAngulo2(list.get(4));
 		t.setAngulo3(list.get(5));
-		tipoController.tipoDeTriangulo(t);
+		t.tipoDeTriangulo();
 	}
 
 	/**
