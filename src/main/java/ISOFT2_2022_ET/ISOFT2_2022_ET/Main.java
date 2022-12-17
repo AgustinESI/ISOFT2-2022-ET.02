@@ -1,7 +1,5 @@
 package ISOFT2_2022_ET.ISOFT2_2022_ET;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +9,9 @@ import ISOFT2_2022_ET.ISOFT2_2022_ET.model.TrianguloController;
 
 public class Main {
 
-	public static Scanner TECLADO = new Scanner(System.in);
+	public static final Scanner TECLADO = new Scanner(System.in);
+	
+	public static final TrianguloController tipoController = new TrianguloController();
 
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<Integer>();
@@ -19,8 +19,9 @@ public class Main {
 		System.out.println(messages[i]); list.add(leerEnteros()); }
 		Triangulo t = new Triangulo(); t.setLado1(list.get(0));
 		t.setLado2(list.get(1)); t.setLado3(list.get(2)); t.setAngulo1(list.get(3));
-		t.setAngulo2(list.get(4)); t.setAngulo3(list.get(5));
-		TrianguloController.tipoDeTriangulo(t);
+		t.setAngulo2(list.get(4));
+		t.setAngulo3(list.get(5));
+		tipoController.tipoDeTriangulo(t);
 	}
 
 	private static int leerEnteros() {
