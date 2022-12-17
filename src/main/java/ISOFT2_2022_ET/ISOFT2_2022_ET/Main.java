@@ -9,7 +9,7 @@ import ISOFT2_2022_ET.ISOFT2_2022_ET.model.TrianguloController;
 
 public class Main {
 
-	public static final Scanner TECLADO = new Scanner(System.in, "UTF-8");
+	public static final Scanner TECLADO = new Scanner(System.in);
 	
 	public static final TrianguloController tipoController = new TrianguloController();
 
