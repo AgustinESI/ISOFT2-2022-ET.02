@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
+			<version>4.13.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -90,7 +90,12 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.9</version>
+				<version>0.8.7</version>
+				<configuration>
+					<excludes>
+						<exclude>META-INF/**</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<id>default-prepare-agent</id>
@@ -195,6 +200,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
 			</plugin>
 
 		</plugins>

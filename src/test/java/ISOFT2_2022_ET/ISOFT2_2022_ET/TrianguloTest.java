@@ -7,15 +7,8 @@ import org.junit.Test;
 
 import ISOFT2_2022_ET.ISOFT2_2022_ET.exceptions.NumerosValidosException;
 import ISOFT2_2022_ET.ISOFT2_2022_ET.model.Triangulo;
-import ISOFT2_2022_ET.ISOFT2_2022_ET.model.TrianguloController;
 
 public class TrianguloTest {
-	TrianguloController trianguloController;
-
-	@Before
-	public void instanciarTrianguloController() {
-		trianguloController = new TrianguloController();
-	}
 
 	@Test(expected = NumerosValidosException.class)
 	public void cdp1() {
@@ -26,7 +19,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -38,7 +31,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(90);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -50,7 +43,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(90);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -62,7 +55,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(90);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -74,7 +67,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -86,7 +79,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test(expected = NumerosValidosException.class)
@@ -98,7 +91,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(0);
 		triangulo.setAngulo2(0);
 		triangulo.setAngulo3(0);
-		trianguloController.tipoDeTriangulo(triangulo);
+		triangulo.tipoDeTriangulo();
 	}
 
 	@Test()
@@ -110,7 +103,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(60);
 		triangulo.setAngulo2(60);
 		triangulo.setAngulo3(60);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Isosceles Acutangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Isosceles Acutangulo");
 	}
 
 	@Test()
@@ -122,7 +115,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(45);
 		triangulo.setAngulo2(45);
 		triangulo.setAngulo3(90);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Isosceles Rectangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Isosceles Rectangulo");
 	}
 
 	@Test()
@@ -134,7 +127,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(45);
 		triangulo.setAngulo2(90);
 		triangulo.setAngulo3(45);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Equilatero Rectangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Equilatero Rectangulo");
 	}
 
 	@Test()
@@ -146,7 +139,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(90);
 		triangulo.setAngulo2(45);
 		triangulo.setAngulo3(45);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Isosceles Rectangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Isosceles Rectangulo");
 	}
 
 	@Test()
@@ -158,7 +151,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(60);
 		triangulo.setAngulo2(60);
 		triangulo.setAngulo3(60);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Escaleno Acutangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Escaleno Acutangulo");
 	}
 
 	@Test()
@@ -170,7 +163,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(30);
 		triangulo.setAngulo2(30);
 		triangulo.setAngulo3(120);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Escaleno Obstusangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Escaleno Obstusangulo");
 	}
 
 	@Test()
@@ -182,7 +175,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(30);
 		triangulo.setAngulo2(120);
 		triangulo.setAngulo3(30);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Escaleno Obstusangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Escaleno Obstusangulo");
 	}
 
 	@Test()
@@ -194,7 +187,7 @@ public class TrianguloTest {
 		triangulo.setAngulo1(120);
 		triangulo.setAngulo2(30);
 		triangulo.setAngulo3(30);
-		assertEquals(trianguloController.tipoDeTriangulo(triangulo), "Escaleno Obstusangulo");
+		assertEquals(triangulo.tipoDeTriangulo(), "Escaleno Obstusangulo");
 	}
 
 }
