@@ -46,7 +46,7 @@ public class Main {
 	 * @return numero desde menos infinito a mas infinito
 	 */
 	private static int leerEnteros() {
-		Integer value = null;
+		Integer value = 0;
 		try {
 			value = TECLADO.nextInt();
 		} catch (Exception e) {
