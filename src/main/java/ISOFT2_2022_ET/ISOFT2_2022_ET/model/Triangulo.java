@@ -52,7 +52,7 @@ public class Triangulo {
 
 	/**
 	 * 
-	 * @param lado1 valor para settear el segundo lado del triangulo
+	 * @param lado2 valor para settear el segundo lado del triangulo
 	 */
 	public void setLado2(int lado2) {
 		this.lado2 = lado2;
@@ -69,7 +69,7 @@ public class Triangulo {
 
 	/**
 	 * 
-	 * @param lado1 valor para settear el tercer lado del triangulo
+	 * @param lado3 valor para settear el tercer lado del triangulo
 	 */
 	public void setLado3(int lado3) {
 		this.lado3 = lado3;
@@ -86,7 +86,7 @@ public class Triangulo {
 
 	/**
 	 * 
-	 * @param lado1 valor para settear el primer angulo del triangulo
+	 * @param angulo1 valor para settear el primer angulo del triangulo
 	 */
 	public void setAngulo1(int angulo1) {
 		this.angulo1 = angulo1;
@@ -103,7 +103,7 @@ public class Triangulo {
 
 	/**
 	 * 
-	 * @param lado1 valor para settear el segundo angulo del triangulo
+	 * @param angulo2 valor para settear el segundo angulo del triangulo
 	 */
 	public void setAngulo2(int angulo2) {
 		this.angulo2 = angulo2;
@@ -120,7 +120,7 @@ public class Triangulo {
 
 	/**
 	 * 
-	 * @param lado1 valor para settear el tercer angulo del triangulo
+	 * @param angulo3 valor para settear el tercer angulo del triangulo
 	 */
 	public void setAngulo3(int angulo3) {
 		this.angulo3 = angulo3;
@@ -128,7 +128,6 @@ public class Triangulo {
 
 	/**
 	 * Comprueba el tipo de triangulo introducido lanzando excepciones en caso de error
-	 * @param triangulo
 	 * @return retorna en formato String el tipo de triangulo introducido
 	 */
 	public String tipoDeTriangulo() {
