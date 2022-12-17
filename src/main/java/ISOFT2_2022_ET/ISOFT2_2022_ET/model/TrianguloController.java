@@ -3,12 +3,25 @@ package ISOFT2_2022_ET.ISOFT2_2022_ET.model;
 import ISOFT2_2022_ET.ISOFT2_2022_ET.exceptions.AngulosValidosException;
 import ISOFT2_2022_ET.ISOFT2_2022_ET.exceptions.NumerosValidosException;
 
+/**
+ * 
+ * @author Enrique Sanchez-Migallon
+ *
+ */
 public class TrianguloController {
 
+	/**
+	 * Constructor vacio de la clase TrianguloController
+	 */
 	public TrianguloController() {
 		super();
 	}
 
+	/**
+	 * Comprueba el tipo de triangulo introducido lanzando excepciones en caso de error
+	 * @param triangulo
+	 * @return retorna en formato String el tipo de triangulo introducido
+	 */
 	public String tipoDeTriangulo(Triangulo t) {
 		String result = "";
 		// Ifs para comprobar que los valroes no sean negativos y 0
